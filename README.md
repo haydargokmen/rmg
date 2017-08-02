@@ -1,4 +1,2 @@
-# rmg
-rmg ND
-1
+# rmg - ec2 demo setup 
 

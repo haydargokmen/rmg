@@ -1,0 +1,9 @@
+# dev files
+*.swp
+*.save
+
+# cache
+tmp
+
+# ansible
+*.retry

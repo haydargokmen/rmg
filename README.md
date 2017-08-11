@@ -1,2 +1,2 @@
-# rmg - ec2 demo setup 
+# rmg - ec2 demo setup -mat
 

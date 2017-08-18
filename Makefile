@@ -10,11 +10,13 @@ ansible_local  = AWS_PROFILE=$(aws_account) ansible-playbook $(vault_password) -
 aws_account ?= dev
 aws_region ?= us-west-2
 
-devops-deploy:
-	$(ansible_cmd) devops-deploy.yml -e env=$(env) -e aws_account=$(aws_account) -e aws_region=$(aws_region) $(debug)
-
-devops-stack:
-	$(ansible_local) devops-stack.yml -e env=$(env) -e aws_account=$(aws_account) -e aws_region=$(aws_region) $(debug)
-
-edit-secrets:
-	ansible-vault $(vault_password) edit vars/secrets.yml
+demo-setup:
+	$(ansible_cmd) demo_setup.yml
+#devops-deploy:
+#	$(ansible_cmd) devops-deploy.yml -e env=$(env) -e aws_account=$(aws_account) -e aws_region=$(aws_region) $(debug)
+#
+#devops-stack:
+#	$(ansible_local) devops-stack.yml -e env=$(env) -e aws_account=$(aws_account) -e aws_region=$(aws_region) $(debug)
+#
+#edit-secrets:
+#	ansible-vault $(vault_password) edit vars/secrets.yml

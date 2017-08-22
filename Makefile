@@ -18,5 +18,5 @@ demo-setup:
 #devops-stack:
 #	$(ansible_local) devops-stack.yml -e env=$(env) -e aws_account=$(aws_account) -e aws_region=$(aws_region) $(debug)
 #
-#edit-secrets:
-#	ansible-vault $(vault_password) edit vars/secrets.yml
+edit-secrets:
+	ansible-vault $(vault_password) edit vars/secrets.yml
